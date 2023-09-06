@@ -23,15 +23,28 @@ export const styles = StyleSheet.create({
         fontSize: 30,
         textAlign: 'right',
     },
+    fila:{
+        flexDirection:'row',
+        justifyContent: 'center',
+        marginBottom: 10,
+        paddingHorizontal: 10,
+    },
     boton:{
         height: 80,
         width: 80,
         backgroundColor: '#9b9b9b',
         borderRadius:100,
         justifyContent: 'center',
-
-
+        marginHorizontal: 10,
     },
+    botomGrey:{
+        backgroundColor: '#9b9b9b9b',
+    }
+    ,
+    botomOrange:{
+        backgroundColor: '#FF6427',
+    }
+    ,
     botonTexto:{
         textAlign: 'center',
         paddingTop:2,
