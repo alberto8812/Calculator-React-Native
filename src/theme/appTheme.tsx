@@ -37,14 +37,6 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         marginHorizontal: 10,
     },
-    botomGrey:{
-        backgroundColor: '#9b9b9b9b',
-    }
-    ,
-    botomOrange:{
-        backgroundColor: '#FF6427',
-    }
-    ,
     botonTexto:{
         textAlign: 'center',
         paddingTop:2,

@@ -1,5 +1,6 @@
+/* eslint-disable react-native/no-inline-styles */
 /* eslint-disable react/react-in-jsx-scope */
-import { Text, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 import { styles } from '../theme/appTheme';
 /**
  * botton of calculator component
@@ -8,14 +9,21 @@ import { styles } from '../theme/appTheme';
 interface props{
     text: string,
     color?:string,
+    ancho?:boolean,
 }
 
-export const BottonCal = ({text,color=''}:props) => {
+export const BottonCal = ({text,color = '#2d2d2d',ancho = false}:props) => {
   return (
-    <View>
-        <View style={[styles.boton,(color === 'Grey') ? styles.botomGrey : styles.botomOrange]}>
-          <Text style={styles.botonTexto}>{text}</Text>
-        </View>
-    </View>
+    <TouchableOpacity>
+      <View>
+          <View style={{
+            ...styles.boton,
+            backgroundColor: color,
+            width:ancho ? 180 : 80,
+          }}>
+            <Text style={{...styles.botonTexto, color:(color == '#9b9b9b' ) ? 'black' : 'white' }}>{text}</Text>
+          </View>
+      </View>
+    </TouchableOpacity>
   );
 };
