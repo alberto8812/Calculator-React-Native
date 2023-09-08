@@ -10,11 +10,14 @@ interface props{
     text: string,
     color?:string,
     ancho?:boolean,
+    accion:(numeroTexto:string)=>void,
 }
 
-export const BottonCal = ({text,color = '#2d2d2d',ancho = false}:props) => {
+export const BottonCal = ({text,color = '#2d2d2d',ancho = false,accion}:props) => {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity
+    onPress={()=>accion(text)}
+    >
       <View>
           <View style={{
             ...styles.boton,
